@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+
+<p><%= HomeContent %></p>
+
+<% console.log(postArrayejs); %>
+
+<%  postArrayejs.forEach(function(post){ %>
+
+ <h1><%= post.composetitle %></h1>
+
+
+
+ <% var myString = post.composePost; %>
+
+ <% var truncatedString = myString.substring(0,100); %>
+
+
+ <p><%= truncatedString %> ...<a href="/posts/<%= post.composetitle%>">Read More</a></p>
+
+
+
+<% })  %>
+
+
+
+<%- include("partials/footer"); -%>
